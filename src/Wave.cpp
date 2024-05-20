@@ -25,7 +25,7 @@ void Wave::write()
 
 std::string Wave::generate_name()
 {
-	std::string name;s
+	std::string name;
 
 	return name;
 }
