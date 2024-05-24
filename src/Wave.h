@@ -1,14 +1,15 @@
 #pragma once
 #include <string>
 #include <fstream>
-#include <chrono>
+#include <ctime>
+#include <cmath>
 
 class Wave
 {
 public:
 	void write();
 private:
-	std::string generate_name();
+	time_t generate_name();
 	void write_as_bytes(std::ofstream& file, uint32_t value, uint32_t byte_size);
 	
 private:
@@ -30,6 +31,9 @@ private:
 	//Data sub chunk
 	const std::string subchunk2_id = "data";
 	const std::string subchunk2_size = "----";
+	uint32_t duration = 2;
+	uint32_t max_amplitude = 32760;
+	double frequency = 250.0;
 
 
 
